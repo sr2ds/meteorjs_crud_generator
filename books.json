@@ -1,0 +1,19 @@
+{
+    "schema":"books",
+    "table":[
+        {
+            "name":"name",
+            "type":"String",
+            "label":"name",
+            "max":"35",
+            "optional":0
+        },
+        {
+            "name":"writer",
+            "type":"String",
+            "label":"writer",
+            "max":"50",
+            "optional":1
+        }
+    ]
+}

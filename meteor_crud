@@ -1,0 +1,33 @@
+#!/usr/bin/php
+<?php
+
+
+$schema_path = $argv[1];
+
+generate_collection($schema_path);
+
+
+/**
+* Generator Colletions from json file
+*/
+function generate_collection($path_to_file) {
+    $file = file_get_contents($path_to_file);
+    $tmp = file_get_contents("./templates/collection.js");
+    $json = json_decode($file);
+    
+    $name = $json->schema;
+    $table = $json->table;
+    
+    $t =null;
+    foreach ($table as $field) {
+        $opt = ($field->optional == false) ? 'false' : 'true';
+        $t .= "$field->name: { type: $field->type, label: $field->label, max: $field->max, optional: $opt },\n";
+    }
+    
+    $e1 = str_replace('_name', $name, $tmp);
+    $e2 = str_replace('_NameUper', ucfirst($name), $e1);
+    $e3 = str_replace('_table', $t, $e2);
+    
+    file_put_contents("../collections/".ucfirst($name).".js", $e3);
+}
+
