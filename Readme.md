@@ -11,8 +11,8 @@ When running ./meteor_crud Books.js, the script will create a collection within 
 Soon I will leave new examples, as well as the continuation of the project.
 
 TODO:
--> Create Collection;
--> Create Views;
--> Create Routes;
--> CRUD Complete;
--> Include module in Menu automatically.
+* Create Collection;
+* Create Views;
+* Create Routes;
+* CRUD Complete;
+* Include module in Menu automatically.
