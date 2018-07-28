@@ -1,3 +1,9 @@
+
+Project is not being maintained by anyone
+===
+It is necessary to continue the modules to complete the Scaffold
+====
+
 Make no mistake, this is no big deal.
 
 Made in PHP (for now), these simple codes will be able to make a simple complete scaffold for your meteorJs.
